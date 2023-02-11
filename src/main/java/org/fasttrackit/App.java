@@ -4,7 +4,16 @@ public class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
 
-        Car carReference = new Car();
+        Engine autoVehicleEngine = new Engine();
+        autoVehicleEngine.manufacturer = "Vw";
+
+        AutoVehicle autoVehicle = new AutoVehicle(autoVehicleEngine);
+
+        Engine engine1 = new Engine();
+        engine1.manufacturer = "Ferrari!";
+        engine1.capacity = 3000;
+
+        Car carReference = new Car(engine1);
         carReference.name = "Ferrari";
         carReference.maxSpeed = 300;
         carReference.fuelLevel = 60;
@@ -14,13 +23,7 @@ public class App {
         carReference.doorCount = 1;
         carReference.color = "Red";
 
-        Engine engine1 = new Engine();
-        engine1.manufacturer = "Ferrari!";
-        engine1.capacity = 3000;
 
-        System.out.println(carReference);
-
-        carReference.engine = engine1;
 
         System.out.println("Engine 1 capacity: " + engine1.capacity);
         System.out.println("Car engine capacity: " + carReference.engine.capacity);
@@ -40,14 +43,14 @@ public class App {
         System.out.println("Color: " + carReference.color);
         System.out.println(carReference);
 
-        Car car2 = new Car();
+        Car car2 = new Car(new Engine());
         car2.name = "Renault";
         car2.fuelLevel = 70;
         car2.maxSpeed = 300;
         car2.mileage = 10;
         car2.totalTraveledDistance = 100;
 
-        car2.engine = new Engine();
+
         car2.engine.capacity = 2000;
 
 
