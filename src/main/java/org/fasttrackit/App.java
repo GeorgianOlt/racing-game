@@ -1,9 +1,7 @@
 package org.fasttrackit;
 
-public class App
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         System.out.println("Hello World!");
 
         Car carReference = new Car();
@@ -74,8 +72,6 @@ public class App
         System.out.println("Engine manufacturer after repair: " + carReference.engine.manufacturer);
 
 
-
-
 //        System.out.println("Initial name for car1 " + carReference.name);
 //
 //        carReference.name = "Audi";
@@ -96,8 +92,13 @@ public class App
 //        System.out.println("Updated Name of car referenced from two variables Car2: " + car2.name);
 //        car2 = null;
 //        System.out.println(carReference.name);
-
-
-
+//        System.out.println("Modulo example: ");
+//        System.out.println(4 % 2);
+//        System.out.println(4 % 3);
+//
+//        if (4 % 2 == 00) {
+//            System.out.println("4 is an even number ");
+//
+//        }
     }
 }
