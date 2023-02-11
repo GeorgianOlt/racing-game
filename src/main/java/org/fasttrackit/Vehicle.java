@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import java.time.LocalDate;
+
 public class Vehicle {
     // class variable (static variable)
     static int totalVehicleCount;
@@ -15,6 +17,8 @@ public class Vehicle {
 
     boolean damaged;
     String color;
+
+    LocalDate manufacturingDate = LocalDate.now();
 
     public Vehicle() {
         totalVehicleCount++;
