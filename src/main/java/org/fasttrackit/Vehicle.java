@@ -1,6 +1,8 @@
 package org.fasttrackit;
 
 public class Vehicle {
+    // class variable (static variable)
+    static int totalVehicleCount;
 
 
     // instance variables
@@ -14,7 +16,9 @@ public class Vehicle {
     boolean damaged;
     String color;
 
-
+    public Vehicle() {
+        totalVehicleCount++;
+    }
 
     public double accelerate(double speed, double durationInHours) {
         if (fuelLevel <= 0 || damaged) {
